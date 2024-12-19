@@ -5,10 +5,10 @@ class EventShow extends StatefulWidget {
   const EventShow({super.key});
 
   @override
-  State<EventShow> createState() => _EventShow();
+  State<EventShow> createState() => EventShowState();
 }
 
-class _EventShow extends State<EventShow> {
+class EventShowState extends State<EventShow> {
   dynamic event = {};
 
   @override

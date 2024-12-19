@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 class UserApi {
   final String _endpoint = "https://webservice.sballando.it";
 
-  Future<Object> login(String email,String password) async {
-    Object userAuth = {};
+  Future<Map<String, dynamic>?> login(String email,String password) async {
+    Map<String, dynamic>? userAuth = {};
      final Map<String, String> body = {
         'email': email,
         'password': password
@@ -24,7 +24,8 @@ class UserApi {
         
         if (status) {
           // Se ok.. recupera i film
-          userAuth = jsonResponse['user'];
+          userAuth = jsonResponse;
+          
         }
       }
       
